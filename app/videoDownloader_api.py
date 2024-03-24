@@ -71,5 +71,6 @@ def get_twitter_infos():
         return jsonify({"message": "Downloaded successfully","img_url":json_response.get("photoURL"),"video_url":json_response.get("videoURL"),"duration":json_response.get("videoDuration")}), 200
 
 if __name__ == '__main__':
+    print("Serever is running...")
     # app.run(port=4000)
     app.run(debug=True)
