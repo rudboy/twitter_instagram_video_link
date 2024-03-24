@@ -31,7 +31,7 @@ def verifier_token(f):
     return wrapper
 
 
-@app.route('/')
+@app.route('/home', methods=['GET'])
 def index():
     return jsonify({"message": "Welcome to the video downloader api"}), 200
 
@@ -53,7 +53,7 @@ def get_insta_infos():
         return jsonify({"message": "Downloaded successfully","img_url":json_response.get("photoURL"),"video_url":json_response.get("videoURL"),"duration":json_response.get("videoDuration")}), 200
 
 @app.route('/twitter_founder', methods=['POST'])
-# @verifier_token
+@verifier_token
 def get_twitter_infos():
     json_str = json.dumps(request.json)
     data = json.loads(json_str)
