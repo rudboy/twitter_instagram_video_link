@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 import json
-from instaDownload import download_media
-from twitterDownload import api_twitter
+from api_videoDownloader.instaDownload import download_media
+from api_videoDownloader.twitterDownload import api_twitter
 
 from urllib.parse import urlparse
 
