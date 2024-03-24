@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import os
 import json
 from instaDownload import download_media
 from twitterDownload import api_twitter
@@ -73,4 +74,5 @@ def get_twitter_infos():
 if __name__ == '__main__':
     print("Serever is running...")
     # app.run(port=4000)
-    app.run(debug=True)
+    port = int(os.getenv('PORT'))
+    app.run(debug=True, port=port)
