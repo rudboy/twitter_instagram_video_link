@@ -30,6 +30,11 @@ def verifier_token(f):
     wrapper.__name__ = f.__name__
     return wrapper
 
+
+@app.route('/')
+def index():
+    return jsonify({"message": "Welcome to the video downloader api"}), 200
+
 # Route pour télécharger les informations de la vidéo Instagram et Twitter
 @app.route('/insta_founder', methods=['POST'])
 @verifier_token
