@@ -29,6 +29,6 @@ shutil.copytree(source_directory, destination_directory)
 
 
 # Créer un fichier ZIP à partir du répertoire de destination
-shutil.make_archive(destination_directory, 'zip', destination_directory)
+# shutil.make_archive(destination_directory, 'zip', destination_directory)
 
 print('Dossier de déploiement pour Elastic Beanstalk créé avec succès.')
