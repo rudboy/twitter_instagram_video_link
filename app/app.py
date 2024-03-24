@@ -31,7 +31,7 @@ def verifier_token(f):
     return wrapper
 
 
-@app.route('/home', methods=['GET'])
+@app.route('/')
 def index():
     return jsonify({"message": "Welcome to the video downloader api"}), 200
 
