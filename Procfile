@@ -1,1 +1,1 @@
-web: gunicorn app.app:videoDownloader_api.app
+web: gunicorn app.videoDownloader_api:app
